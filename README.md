@@ -1,2 +1,3 @@
 # dahaa-backend
-backend for our dahaa app
+
+backend for dahaa app
