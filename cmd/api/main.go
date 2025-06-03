@@ -10,6 +10,7 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/go-playground/validator/v10"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"github.com/redis/go-redis/v9"
@@ -77,6 +78,9 @@ func main() {
 
 	// Initialize Echo
 	e := echo.New()
+
+	// Register custom validator
+	e.Validator = &handler.CustomValidator{Validator: validator.New()}
 
 	// Middleware
 	e.Use(middleware.Logger())
