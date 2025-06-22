@@ -1,3 +1,3 @@
 # dahaa-backend
 
-backend for dahaa app
+backend for dahaa game
